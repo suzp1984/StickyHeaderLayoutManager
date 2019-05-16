@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.core.content.res.ResourcesCompat
 import androidx.recyclerview.widget.RecyclerView
 import io.github.suzp1984.stickyheaderlayoutmanager.R
 
@@ -94,7 +95,7 @@ class AlphabetAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
         init {
             itemView.findViewById<TextView>(R.id.simple_title)?.apply {
                 textSize = itemView.context.resources.getDimension(R.dimen.view_header_size)
-                setTextColor(resources.getColor(R.color.colorAccent))
+                setTextColor(ResourcesCompat.getColor(resources, R.color.colorAccent, null))
             }
         }
 
