@@ -81,6 +81,20 @@ class AlphabetAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
         }
     }
 
+    fun getTitle(position: Int): String {
+        return flatedValues[position] + position
+    }
+
+    fun previousHeaderPosition(position: Int): Int? {
+        if (position < 1) {
+            return null
+        }
+
+        return (position - 1 downTo  0).firstOrNull {
+            getItemViewType(it) == HEADER_POSITION
+        }
+    }
+
     private fun isHeaderAt(adapterPosition: Int): Boolean {
         return adapterPosition in headersPositions
     }

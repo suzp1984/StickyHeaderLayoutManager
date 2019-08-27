@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/nav_graph"
+        app:startDestination="@id/mainFragment">
+
+
+    <fragment
+            android:id="@+id/mainFragment"
+            android:name="io.github.suzp1984.stickyheaderlayoutmanager.MainFragment"
+            android:label="MainFragment"
+            tools:layout="@layout/fragment_main"
+            >
+        <action
+                android:id="@+id/action_mainFragment_to_stickyHeaderFragment"
+                app:destination="@id/customRecyclerFragment" />
+        <action
+                android:id="@+id/action_mainFragment_to_customLayoutFragment"
+                app:destination="@id/customLayoutFragment" />
+    </fragment>
+
+    <fragment
+            android:id="@+id/customRecyclerFragment"
+            android:name="io.github.suzp1984.stickyheaderlayoutmanager.CustomRecyclerViewFragment"
+            android:label="StickyHeaderFragment"
+            tools:layout="@layout/fragment_custom_recycler"/>
+
+    <fragment
+        android:id="@+id/customLayoutFragment"
+        android:name="io.github.suzp1984.stickyheaderlayoutmanager.CustomLayoutFragment"
+        android:label="CustomLayoutFragment"
+        tools:layout="@layout/fragment_custom_layout" />
+
+
+</navigation>
