@@ -29,6 +29,11 @@ class MainFragment: Fragment() {
             findNavController().navigate(R.id.action_mainFragment_to_stickyHeaderFragment)
         }
 
+
+        custom_decoration.setOnClickListener {
+            findNavController().navigate(R.id.action_mainFragment_to_decorationFragment)
+        }
+
         activity?.title = "Main"
     }
 

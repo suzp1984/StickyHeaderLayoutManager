@@ -17,6 +17,10 @@ class HomeMadeLinearLayoutManager: RecyclerView.LayoutManager() {
         return RecyclerView.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT)
     }
 
+    override fun isAutoMeasureEnabled(): Boolean {
+        return true
+    }
+
     override fun onLayoutChildren(recycler: RecyclerView.Recycler?, state: RecyclerView.State?) {
         if (recycler == null || state == null) {
             return

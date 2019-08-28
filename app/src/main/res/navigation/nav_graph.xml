@@ -18,6 +18,9 @@
         <action
                 android:id="@+id/action_mainFragment_to_customLayoutFragment"
                 app:destination="@id/customLayoutFragment" />
+        <action
+                android:id="@+id/action_mainFragment_to_decorationFragment"
+                app:destination="@id/decorationFragment" />
     </fragment>
 
     <fragment
@@ -31,6 +34,11 @@
         android:name="io.github.suzp1984.stickyheaderlayoutmanager.CustomLayoutFragment"
         android:label="CustomLayoutFragment"
         tools:layout="@layout/fragment_custom_layout" />
+
+    <fragment
+            android:id="@+id/decorationFragment"
+            android:name="io.github.suzp1984.stickyheaderlayoutmanager.DecorationFragment"
+            android:label="DecorationFragment" />
 
 
 </navigation>
